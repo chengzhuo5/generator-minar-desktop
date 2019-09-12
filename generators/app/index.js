@@ -87,10 +87,6 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath("store"), this.destinationPath("store"));
     this.fs.copy(this.templatePath("utils"), this.destinationPath("utils"));
     this.fs.copy(
-      this.templatePath(".editorconfig"),
-      this.destinationPath(".editorconfig")
-    );
-    this.fs.copy(
       this.templatePath(".gitignore"),
       this.destinationPath(".gitignore")
     );
