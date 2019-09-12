@@ -4,4 +4,4 @@ require('ts-node').register({
   transpileOnly:true,
   typeCheck:false//破编译器太严格了
 }); // This will register the TypeScript compiler
-require('../server/electron'); // This will load our Typescript application
+require('./electron'); // This will load our Typescript application

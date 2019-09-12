@@ -4,7 +4,7 @@
   "description": "Vant+SSR+Typescript",
   "author": "Minar",
   "private": true,
-  "main": "serverJs/electron.js",
+  "main": "server4Electron/loader.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon  --exec 'ts-node -T --project tsconfigNode.json' server/index.ts --watch server",
     "build": "nuxt-ts build",

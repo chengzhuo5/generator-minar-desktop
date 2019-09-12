@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV == undefined) process.env.NODE_ENV = "production"
 import { app, BrowserWindow } from "electron";
-import { start } from "./index";
+import { start } from "../server/index";
 import { execSync } from "child_process";
 
 // 保持对window对象的全局引用，如果不这么做的话，当JavaScript对象被
