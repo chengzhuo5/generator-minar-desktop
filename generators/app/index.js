@@ -57,7 +57,12 @@ module.exports = class extends Generator {
     pkg.description = this.props.projectDesc;
     pkg.author = this.props.projectAuthor;
     pkg.license = this.props.projectLicense;
-    if (!this.props.electron) {
+    if (this.props.electron) {
+      this.fs.copy(
+        this.templatePath("serverJs"),
+        this.destinationPath("serverJs")
+      );
+    } else {
       delete pkg.devDependencies.electron;
       delete pkg.devDependencies["electron-builder"];
       delete pkg.main;
@@ -79,10 +84,6 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath("pages"), this.destinationPath("pages"));
     this.fs.copy(this.templatePath("plugins"), this.destinationPath("plugins"));
     this.fs.copy(this.templatePath("server"), this.destinationPath("server"));
-    this.fs.copy(
-      this.templatePath("serverJs"),
-      this.destinationPath("serverJs")
-    );
     this.fs.copy(this.templatePath("static"), this.destinationPath("static"));
     this.fs.copy(this.templatePath("store"), this.destinationPath("store"));
     this.fs.copy(this.templatePath("utils"), this.destinationPath("utils"));
