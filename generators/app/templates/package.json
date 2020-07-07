@@ -39,7 +39,7 @@
     "@nuxt/typescript-build": "^0.2.6",
     "babel-plugin-import": "^1.12.1",
     "babel-plugin-module-resolver": "^3.2.0",
-    "electron": "^6.0.8",
+    "electron": "^9.1.0",
     "electron-builder": "^21.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
